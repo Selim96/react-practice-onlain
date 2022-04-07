@@ -1,6 +1,7 @@
 import User from "components/TextContent/TextContent";
 import Menu from "components/Menu/Menu";
 import list from "db/list";
+import s from './Sidebar.module.css';
 
 const Sidebar = () => {
   const user = {
@@ -8,10 +9,10 @@ const Sidebar = () => {
     name: "Bill Gates",
   };
   return (
-    <>
+    <div className={s.wrapper}>
       <Menu items={list} />
       <User textContent={user} />
-    </>
+    </div>
   );
 };
 
